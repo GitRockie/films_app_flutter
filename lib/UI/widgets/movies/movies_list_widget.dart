@@ -1,11 +1,17 @@
+import 'package:films_app_flutter/structure/controllers/movies_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class MoviesListWidget extends StatelessWidget {
   const MoviesListWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    MoviesController  moviesController  = Get.find();
+    return GetBuilder<MoviesController>(
+      init: MoviesController(),
+      builder: ((controller) {
+        return Container(
       margin: const EdgeInsets.only(
         top: 10,
         left: 20,
@@ -38,34 +44,30 @@ class MoviesListWidget extends StatelessWidget {
           ),
           Flexible(
             flex: 6,
-            child: Container(
-              color: Colors.blue,
-              child: Column(
-                children: [
-                  Flexible(
-                    flex: 1,
-                    child: Container(
-                      color: Colors.green,
-                    ),
-                  ),
-                  Flexible(
-                    flex: 1,
-                    child: Container(
-                      color: Colors.black,
-                    ),
-                  ),
-                  Flexible(
-                    flex: 1,
-                    child: Container(
-                      color: Colors.white,
-                    ),
-                  )
-                ],
-              ),
-            ),
+            child: SizedBox(
+             
+              child: Obx(() => ListView.builder(
+                itemCount: moviesController.popularMovies.value.results?.length ?? 0,
+                itemBuilder: ((context, index) {
+                  return    Column(
+                    children: [
+                      Text(controller.popularMovies.value.results?[index].originalTitle ?? '', style: const TextStyle(color: Colors.white),)
+                    ]
+              
+              );
+                }))),)
+              
+           
           ),
+          
         ],
       ),
     );
+      }),
+      
+    );
+    
+    
+    
   }
 }
