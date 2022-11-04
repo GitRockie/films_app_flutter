@@ -22,6 +22,7 @@ class HomePage1 extends StatelessWidget {
                   moviesController.getPopularMovies();
                 },
               ),*/
+              
             body: Obx(
               () => ListView.builder(
                   itemCount:
