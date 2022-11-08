@@ -23,11 +23,11 @@ class SectionFilmsWidget extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: const [
-              MoviesListWidget(),
+              MoviesListWidget(titleSection: '',),
               SizedBox(
                 height: 25,
               ),
-              MoviesListWidget(),
+              MoviesListWidget(titleSection: '',),
             ],
           ),
         ),

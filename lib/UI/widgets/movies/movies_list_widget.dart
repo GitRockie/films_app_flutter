@@ -5,7 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class MoviesListWidget extends StatelessWidget {
-  const MoviesListWidget({Key? key}) : super(key: key);
+final String titleSection;
+  const MoviesListWidget({Key? key, required this.titleSection}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -8,7 +8,7 @@ class AppPages {
   static final routes = [
     GetPage(
       name: Routes.HOME,
-      page: () => DetailsPage(),
+      page: () => HomePage(),
       binding: MoviesBinding(),
     ),
     GetPage(
