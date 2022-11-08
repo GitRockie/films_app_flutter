@@ -5,6 +5,12 @@ class DetailsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const Scaffold(
+      backgroundColor:  Color.fromRGBO(91, 161, 210, 1),
+      body: CustomScrollView(
+        
+      ),
+
+    );
   }
 }
