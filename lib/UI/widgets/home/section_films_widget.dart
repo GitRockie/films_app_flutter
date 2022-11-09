@@ -1,4 +1,6 @@
-import 'package:films_app_flutter/UI/widgets/movies/movies_list_widget.dart';
+import 'package:films_app_flutter/UI/themes/colors_theme.dart';
+import 'package:films_app_flutter/UI/widgets/movies/movies_list_most_popular_widget.dart';
+import 'package:films_app_flutter/UI/widgets/movies/movies_list_popular_widget.dart';
 import 'package:flutter/material.dart';
 
 class SectionFilmsWidget extends StatelessWidget {
@@ -9,7 +11,7 @@ class SectionFilmsWidget extends StatelessWidget {
     return Container(
       width: double.infinity,
       decoration: const BoxDecoration(
-        color: Color.fromARGB(255, 39, 48, 65),
+        color: AppColors.darkBackground,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),
@@ -23,11 +25,16 @@ class SectionFilmsWidget extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: const [
-              MoviesListWidget(titleSection: '',),
-              SizedBox(
-                height: 25,
+
+              //Esta es la lista de las peliculas populares de origen
+              MoviesListPopularWidget(
+                titleSection: "RECOMENDADO PARA TI",
               ),
-              MoviesListWidget(titleSection: '',),
+              //Esta es la lista de películas ordenadas en función de la popularidad
+              MoviesListMostPopularWidget(
+                titleSection: "MEJOR VALORADAS",
+              )
+
             ],
           ),
         ),
