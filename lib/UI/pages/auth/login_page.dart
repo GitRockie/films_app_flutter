@@ -11,6 +11,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
 
+
       backgroundColor: Colors.purple,
       body: SizedBox(
         child: Container(
@@ -19,8 +20,9 @@ class LoginPage extends StatelessWidget {
           width: double.infinity,
           color: Colors.purple,
           child: Column(
-            children: const [
-                Text('Welcome!', style: TextStyle(
+            children:  [
+                const Text('Welcome!', style: TextStyle(
+
                 color: Colors.white,
                 fontSize: 20,
                 fontWeight: FontWeight.bold
@@ -30,11 +32,12 @@ class LoginPage extends StatelessWidget {
                 
                  child:  CardLoginForm()
                ),
-                SizedBox(height: 30,)
+               const SizedBox(height: 30,)
             ],
           ),
         )
          ),
+
     );
   }
 }
