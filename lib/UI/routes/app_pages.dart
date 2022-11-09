@@ -4,19 +4,26 @@ import 'package:films_app_flutter/UI/routes/app_routes.dart';
 import 'package:films_app_flutter/structure/bindings/movies_binding.dart';
 import 'package:get/get.dart';
 
+import '../pages/auth/login_page.dart';
+import '../pages/auth/register_page.dart';
+
 class AppPages {
   static final routes = [
     GetPage(
       name: Routes.HOME,
-      page: () => HomePage(),
+      page: () => const HomePage(),
       binding: MoviesBinding(),
     ),
     GetPage(
       name: Routes.DETAILS,
-      page: () => DetailsPage(
+      page: () => const DetailsPage(
         src: null,
         movie: null,
       ),
-    )
+
+    ),
+    GetPage(name: Routes.LOGIN, page: ()=> const LoginPage()),
+    GetPage(name: Routes.REGISTER, page: ()=> const RegisterPage()),
+
   ];
 }
