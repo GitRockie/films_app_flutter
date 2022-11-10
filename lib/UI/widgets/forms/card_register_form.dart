@@ -2,8 +2,8 @@ import 'package:films_app_flutter/UI/utils/validators_utils.dart';
 import 'package:films_app_flutter/structure/controllers/auth_controller.dart';
 import 'package:flutter/material.dart';
 
-class CardLoginForm extends StatelessWidget {
-  CardLoginForm({super.key});
+class CardRegisterForm extends StatelessWidget {
+  CardRegisterForm({super.key});
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
