@@ -37,6 +37,14 @@ class AuthController extends GetxController {
     );
   }
 
+  loginWithEmailAndPassword() async {
+    firebaseUser.value =
+        await AuthFirebaseRepository().loginWithEmailAndPassword(
+      email: emailController.value.text,
+      password: passwordController.value.text,
+    );
+  }
+
   Future<void> signOut() async {
     return _auth.signOut();
   }
@@ -44,7 +52,7 @@ class AuthController extends GetxController {
   handleAuthChanged(User? firebaseUser) async {
     //Conseguir datos desde firestore
 
-    if (firebaseUser?.isAnonymous ?? false) {
+    if (firebaseUser?.isAnonymous == false && firebaseUser?.uid != null) {
       Get.offAllNamed(Routes.HOME);
     } else {
       Get.offAllNamed(Routes.LOGIN);
