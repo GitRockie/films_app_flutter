@@ -32,14 +32,15 @@ dependencies:
   
   card_swiper: ^2.0.4
   cupertino_icons: ^1.0.2
-  firebase_auth: ^4.1.1
-  firebase_core: ^2.1.1
+  dependencies:
+  firebase_auth: ^4.1.2
+  
   flutter:
     sdk: flutter
   get: ^4.6.5
   http: ^0.13.5
-  firebase_core: ^2.1.1
-  firebase_auth: ^4.1.1
+  firebase_core: ^2.2.0
+  
 
 dev_dependencies:
 
@@ -49,7 +50,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
-  flutter_test:
+  flutter_test:w
     sdk: flutter
 
 # For information on the generic Dart part of this file, see the
