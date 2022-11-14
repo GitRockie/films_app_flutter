@@ -17,7 +17,10 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      return web;
+      throw UnsupportedError(
+        'DefaultFirebaseOptions have not been configured for web - '
+        'you can reconfigure this by running the FlutterFire CLI again.',
+      );
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -46,31 +49,21 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBJPiyDWSWTpP-n-syxQ_Z015orlXjjkrM',
-    appId: '1:227153523711:web:1fc62eeb762aa71da2adca',
-    messagingSenderId: '227153523711',
-    projectId: 'films-flutter',
-    authDomain: 'films-flutter.firebaseapp.com',
-    storageBucket: 'films-flutter.appspot.com',
-    measurementId: 'G-2L5R4CT2ZB',
-  );
-
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyA3GPCv-oSqrEw6SCFfWTt3Qgm8TNa-XaA',
-    appId: '1:227153523711:android:f05712e01a9899eba2adca',
-    messagingSenderId: '227153523711',
-    projectId: 'films-flutter',
-    storageBucket: 'films-flutter.appspot.com',
+    apiKey: 'AIzaSyBXXlhQ9_8Ll6bkExEY3Uk6qKFkDPRyVDQ',
+    appId: '1:288292479556:android:a1f16625876bb416575211',
+    messagingSenderId: '288292479556',
+    projectId: 'films-cifo-app',
+    storageBucket: 'films-cifo-app.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyA4SR39GvPRwqt9cNfxz4BfWCf9b1DCJgI',
-    appId: '1:227153523711:ios:9e2ab874ba985f5ca2adca',
-    messagingSenderId: '227153523711',
-    projectId: 'films-flutter',
-    storageBucket: 'films-flutter.appspot.com',
-    iosClientId: '227153523711-hh1n3at6j065ju4dh2o994ri10ctknen.apps.googleusercontent.com',
+    apiKey: 'AIzaSyCNhR1lh3g1fiuYjc3mDKsOyfjnm3716Qk',
+    appId: '1:288292479556:ios:1d8b7cd998038e8d575211',
+    messagingSenderId: '288292479556',
+    projectId: 'films-cifo-app',
+    storageBucket: 'films-cifo-app.appspot.com',
+    iosClientId: '288292479556-vovrl9nkmoq6oh4ukjj3ra7ajn4plcds.apps.googleusercontent.com',
     iosBundleId: 'com.example.filmsAppFlutter',
   );
 }

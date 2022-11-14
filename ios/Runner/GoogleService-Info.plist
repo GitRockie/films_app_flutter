@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>227153523711-hh1n3at6j065ju4dh2o994ri10ctknen.apps.googleusercontent.com</string>
+	<string>288292479556-vovrl9nkmoq6oh4ukjj3ra7ajn4plcds.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.227153523711-hh1n3at6j065ju4dh2o994ri10ctknen</string>
+	<string>com.googleusercontent.apps.288292479556-vovrl9nkmoq6oh4ukjj3ra7ajn4plcds</string>
 	<key>API_KEY</key>
-	<string>AIzaSyA4SR39GvPRwqt9cNfxz4BfWCf9b1DCJgI</string>
+	<string>AIzaSyCNhR1lh3g1fiuYjc3mDKsOyfjnm3716Qk</string>
 	<key>GCM_SENDER_ID</key>
-	<string>227153523711</string>
+	<string>288292479556</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.example.filmsAppFlutter</string>
 	<key>PROJECT_ID</key>
-	<string>films-flutter</string>
+	<string>films-cifo-app</string>
 	<key>STORAGE_BUCKET</key>
-	<string>films-flutter.appspot.com</string>
+	<string>films-cifo-app.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:227153523711:ios:9e2ab874ba985f5ca2adca</string>
+	<string>1:288292479556:ios:1d8b7cd998038e8d575211</string>
 </dict>
 </plist>

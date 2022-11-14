@@ -1,13 +1,14 @@
 import 'package:films_app_flutter/UI/utils/validators_utils.dart';
 import 'package:films_app_flutter/structure/controllers/auth_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class CardLoginForm extends StatelessWidget {
   CardLoginForm({super.key});
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
-    AuthController authController = AuthController();
+    AuthController authController = Get.find();
     FormValidator formValidator = FormValidator();
     return Form(
       key: _formKey,
@@ -32,10 +33,11 @@ class CardLoginForm extends StatelessWidget {
                   obscureText: false,
                   controller: authController.nameController,
                   validator: formValidator.isValidName,
-                  decoration: InputDecoration(hintText: "Escribe tu nombre"),
+                  decoration:
+                      const InputDecoration(hintText: "Escribe tu nombre"),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Flexible(
@@ -45,10 +47,11 @@ class CardLoginForm extends StatelessWidget {
                   obscureText: false,
                   controller: authController.emailController,
                   validator: formValidator.isValidEmail,
-                  decoration: InputDecoration(hintText: "Escribe tu email"),
+                  decoration:
+                      const InputDecoration(hintText: "Escribe tu email"),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Flexible(
@@ -57,10 +60,10 @@ class CardLoginForm extends StatelessWidget {
                   controller: authController.passwordController,
                   validator: formValidator.isValidPass,
                   decoration:
-                      InputDecoration(hintText: "Escribe tu contraseña"),
+                      const InputDecoration(hintText: "Escribe tu contraseña"),
                 ),
               ),
-              Expanded(
+              const Expanded(
                 child: SizedBox(
                   height: 20,
                 ),
@@ -68,7 +71,6 @@ class CardLoginForm extends StatelessWidget {
 
               TextButton(
                 onPressed: () {
-                  print(authController.nameController.value);
                   if (_formKey.currentState!.validate()) {
                     print("Este formulario es verdadero");
                   } else {
